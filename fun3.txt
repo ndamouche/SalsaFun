@@ -1,0 +1,16 @@
+
+%salsa% 
+
+double main(){
+ x = 2.0 ;
+ y = 2.0 * x - 1.0 ;
+ z = f(2.0) ;
+ return z ;
+ }
+ 
+double f( double u){
+ w = 2.0 * u ;
+ v = u + 1.0 ;
+ return v ;
+} 
+

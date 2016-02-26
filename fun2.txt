@@ -1,0 +1,15 @@
+x = [2.0, 4.0]
+%salsa% 
+
+double main(){
+ y = 0.000000001 ;
+ z = f(x,y) ;
+ return z ;
+ }
+ 
+double f(double u, double v){
+ w = (u + v) + v;
+ return w ;
+} 
+
+

@@ -1,0 +1,52 @@
+ast2peg.cmo : salsaTypes.cmo epeg_types.cmo
+ast2peg.cmx : salsaTypes.cmx epeg_types.cmx
+epeg2epegsharp.cmo : peg2epeg.cmo epeg_types.cmo epeg_prelude.cmo
+epeg2epegsharp.cmx : peg2epeg.cmx epeg_types.cmx epeg_prelude.cmx
+epeg_prelude.cmo : salsaTypes.cmo prelude.cmo epeg_types.cmo
+epeg_prelude.cmx : salsaTypes.cmx prelude.cmx epeg_types.cmx
+epeg_types.cmo : salsaTypes.cmo
+epeg_types.cmx : salsaTypes.cmx
+float.cmo : ssa.cmo salsaTypes.cmo print.cmo prelude.cmo
+float.cmx : ssa.cmx salsaTypes.cmx print.cmx prelude.cmx
+float_num.cmo : ssa.cmo print.cmo prelude.cmo
+float_num.cmx : ssa.cmx print.cmx prelude.cmx
+function.cmo : salsaTypes.cmo rewrite.cmo prelude.cmo
+function.cmx : salsaTypes.cmx rewrite.cmx prelude.cmx
+mainEPEG.cmo : salsaTypes.cmo profitability.cmo prelude.cmo peg2epeg.cmo \
+    float.cmo epeg_types.cmo epeg2epegsharp.cmo ast2peg.cmo
+mainEPEG.cmx : salsaTypes.cmx profitability.cmx prelude.cmx peg2epeg.cmx \
+    float.cmx epeg_types.cmx epeg2epegsharp.cmx ast2peg.cmx
+maineval.cmo : ssa.cmo salsaTypes.cmo rewrite.cmo print.cmo prelude.cmo \
+    measure.cmo function.cmo float.cmo epeg_types.cmo
+maineval.cmx : ssa.cmx salsaTypes.cmx rewrite.cmx print.cmx prelude.cmx \
+    measure.cmx function.cmx float.cmx epeg_types.cmx
+mainmeas.cmo : ssa.cmo salsaTypes.cmo rewrite.cmo print.cmo prelude.cmo \
+    measure.cmo function.cmo float.cmo epeg_types.cmo
+mainmeas.cmx : ssa.cmx salsaTypes.cmx rewrite.cmx print.cmx prelude.cmx \
+    measure.cmx function.cmx float.cmx epeg_types.cmx
+mainrw.cmo : ssa.cmo salsaTypes.cmo rewrite.cmo print.cmo prelude.cmo \
+    measure.cmo function.cmo float.cmo epeg_types.cmo
+mainrw.cmx : ssa.cmx salsaTypes.cmx rewrite.cmx print.cmx prelude.cmx \
+    measure.cmx function.cmx float.cmx epeg_types.cmx
+measure.cmo : salsaTypes.cmo rewrite.cmo prelude.cmo float.cmo
+measure.cmx : salsaTypes.cmx rewrite.cmx prelude.cmx float.cmx
+peg2epeg.cmo : salsaTypes.cmo prelude.cmo epeg_types.cmo epeg_prelude.cmo
+peg2epeg.cmx : salsaTypes.cmx prelude.cmx epeg_types.cmx epeg_prelude.cmx
+prelude.cmo : salsaTypes.cmo
+prelude.cmx : salsaTypes.cmx
+print.cmo : salsaTypes.cmo prelude.cmo
+print.cmx : salsaTypes.cmx prelude.cmx
+profitability.cmo : salsaTypes.cmo print.cmo prelude.cmo float.cmo \
+    epeg_types.cmo epeg_prelude.cmo
+profitability.cmx : salsaTypes.cmx print.cmx prelude.cmx float.cmx \
+    epeg_types.cmx epeg_prelude.cmx
+rewrite.cmo : ssa.cmo salsaTypes.cmo print.cmo prelude.cmo mainEPEG.cmo \
+    float.cmo
+rewrite.cmx : ssa.cmx salsaTypes.cmx print.cmx prelude.cmx mainEPEG.cmx \
+    float.cmx
+salsa.cmo : ssa.cmo print.cmo prelude.cmo
+salsa.cmx : ssa.cmx print.cmx prelude.cmx
+salsaTypes.cmo :
+salsaTypes.cmx :
+ssa.cmo : salsaTypes.cmo prelude.cmo
+ssa.cmx : salsaTypes.cmx prelude.cmx

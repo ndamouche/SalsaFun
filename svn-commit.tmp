@@ -1,0 +1,5 @@
+correction bug while (variables lues/ecrites ds boucle)
+
+--Cette ligne, et les suivantes ci-dessous, seront ignorées--
+
+M    rewrite.ml
